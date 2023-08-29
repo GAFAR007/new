@@ -6,8 +6,22 @@
 // - If it's an empty string (''), return undefined.
 
 const firstLetter = (str) => {
-  // Your code here
-}
+  console.log(str);
+
+  let split = str.split("");
+  console.log(split);
+  let firstLetter = str.split("")[0];
+
+  if (str === "") {
+    return undefined;
+  } else {
+    return firstLetter;
+  }
+};
+
+console.log(firstLetter("hello"));
+
+console.log(firstLetter(""));
 
 // We need t2 export the function in order for our unit test to have access to it.
 module.exports = firstLetter;
