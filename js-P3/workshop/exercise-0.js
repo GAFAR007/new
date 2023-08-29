@@ -15,5 +15,5 @@ const strLength = (str) => {
   return str.length;
 };
 
-// We need to export the function in order for our unit test to have access to it.
+// We need to export the function in order for our unit test to have access to it..
 module.exports = strLength;
