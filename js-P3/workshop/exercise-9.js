@@ -25,8 +25,29 @@
 // solution comes more quickly :)
 
 const uniqueElements = (arr1, arr2) => {
-  // Your code here
+  if (
+    !Array.isArray(arr1) ||
+    !Array.isArray(arr2)
+  ) {
+    return undefined; // Return undefined if inputs are not arrays
+  }
+
+  const uniqueArr1 = arr1.filter(
+    (element) => !arr2.includes(element)
+  );
+  const uniqueArr2 = arr2.filter(
+    (element) => !arr1.includes(element)
+  );
+
+  return uniqueArr1.concat(uniqueArr2);
 };
 
+console.log(
+  uniqueElements([0, 1, 2, 3], [1, 3, 4, 5])
+);
+console.log(uniqueElements([1, 2, 3], [3, 2, 1]));
+console.log(
+  uniqueElements([1, 2, 3], 'not an array')
+);
 // We need to export the function in order for our unit test to have access to it.
 module.exports = uniqueElements;

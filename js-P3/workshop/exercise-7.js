@@ -13,8 +13,19 @@
 // - If the second parameter is not an object, return the original array.
 
 const insert = (arr, obj) => {
-  // Insert missing solution please
+  if (typeof obj === 'object' && obj !== null) {
+    return arr.map((object) => ({
+      ...object,
+      ...obj,
+    }));
+  } else {
+    return arr;
+  }
 };
-
+console.log(
+  insert([{ name: 'Bob' }, { name: 'Josie' }], {
+    isAvailable: false,
+  })
+);
 // We need to export the function in order for our unit test to have access to it.
 module.exports = insert;

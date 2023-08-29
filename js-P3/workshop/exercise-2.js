@@ -6,9 +6,23 @@
 // - If it's an empty string, return `undefined`
 // - If it's not a string, return `undefined`
 
-const lastCharacter = (str) => {
-  // Your code here
-}
+const lastLetter = (str) => {
+  console.log(str);
 
-// We need to export the function in order for our unit test to have access to it.
+  let split = str.split("");
+  console.log(split);
+  let lastLetter = str[str.length - 1];
+
+  if (str === "") {
+    return undefined;
+  } else {
+    return lastLetter;
+  }
+};
+
+console.log(lastLetter("yep"));
+
+console.log(lastLetter(""));
+
+// /We need to export the function in order for our unit test to have access to it.
 module.exports = lastCharacter;

@@ -9,5 +9,5 @@ const firstLetter = (str) => {
   // Your code here
 }
 
-// We need to export the function in order for our unit test to have access to it.
+// We need t2 export the function in order for our unit test to have access to it.
 module.exports = firstLetter;
